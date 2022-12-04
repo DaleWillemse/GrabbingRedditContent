@@ -1,7 +1,7 @@
 import requests
 import requests.auth
 import json
-from CredentialsReddit import *  # import all credentials
+from CredentialsReddit import USERNAME, PASSWORD, CLIENT_ID, CLIENT_SECRET
 
 # Connecting to Reddit REST API
 
