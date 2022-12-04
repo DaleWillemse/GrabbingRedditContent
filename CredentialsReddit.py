@@ -1,5 +1,0 @@
-USERNAME = "Mr-DaleDude"
-PASSWORD = "Atlas_1235!"
-
-CLIENT_ID = "vHrzObnFtZ_m_DaBJRaBbw"
-CLIENT_SECRET = "KVSJ_2SiO0AVzRp1OQNHwkykCeAJpg"
