@@ -1,11 +1,9 @@
 import requests
 import requests.auth
 import json
-from CredentialsReddit import USERNAME, PASSWORD
+from CredentialsReddit import *
 
 # Connecting to Reddit REST API
-CLIENT_ID = "vHrzObnFtZ_m_DaBJRaBbw"
-CLIENT_SECRET = "KVSJ_2SiO0AVzRp1OQNHwkykCeAJpg"
 
 client_auth = requests.auth.HTTPBasicAuth(
     CLIENT_ID, CLIENT_SECRET)  # Authenticate Reddit App
@@ -36,7 +34,7 @@ headers_get = {
 }
 
 response2 = requests.get(
-    OAUTH_ENDPOINT + '/r/ArtefactPorn/top/', headers=headers_get, params=params_get)  # Which posts to grab
+    OAUTH_ENDPOINT + '/r/ArtefactPorn/new/', headers=headers_get, params=params_get)  # Which posts to grab
 
 data = response2.json()
 REDDIT_CONTENT = data["data"]["children"][0]["data"]["title"]
