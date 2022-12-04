@@ -34,9 +34,14 @@ headers_get = {
 }
 
 response2 = requests.get(
-    OAUTH_ENDPOINT + '/r/ArtefactPorn/new/', headers=headers_get, params=params_get)  # Which posts to grab
+    OAUTH_ENDPOINT + '/r/ArtefactPorn/top/', headers=headers_get, params=params_get)  # Which posts to grab
 
 data = response2.json()
 REDDIT_CONTENT = data["data"]["children"][0]["data"]["title"]
 REDDIT_IMAGE = data["data"]["children"][0]["data"]["url_overridden_by_dest"]
-print(REDDIT_CONTENT + '\n' + REDDIT_IMAGE)
+
+# Saving to text file
+CONTENT_TEXT = open('RedditContent.txt', 'a+')
+CONTENT_TEXT.write(REDDIT_CONTENT + '\n' + REDDIT_IMAGE + '\n')
+
+CONTENT_TEXT.close()
